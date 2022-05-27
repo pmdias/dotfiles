@@ -18,8 +18,35 @@ vim.call('plug#begin')
 -- a dependency of other plugins, most notably Telescope.
 Plug('nvim-lua/plenary.nvim')
 
+-- Telescope, paired with the command line tools ripgrep and fd provides that
+-- fastest fuzzy finding inside vim.
+Plug('nvim-telescope/telescope.nvim')
+
 -- Provides a set of nice commands to tabularize and align content inside of
 -- vim. Mostly a simple text manipulation utility.
 Plug('godlygeek/tabular')
+
+
+-- Themes and UI customization
+-- ---------------------------------------------------------------------------
+
+-- Use the nord theme compatible with neovim treesitter
+Plug('shaunsingh/nord.nvim')
+
+-- Lua fork of vim-devicons, providing filetype glyphs to many plugins
+Plug('kyazdani42/nvim-web-devicons')
+
+-- Status line for neovim written in pure. I found this status line to provide
+-- the best performance for my setup.
+Plug('nvim-lualine/lualine.nvim')
+
+
+-- Tree sitter
+-- ---------------------------------------------------------------------------
+
+-- Neovim treesitter plugin that builds an abstraction layer on top of the
+-- neovim's treesitter and providing multiple useful services around it like
+-- better highlighting.
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 
 vim.call('plug#end')
